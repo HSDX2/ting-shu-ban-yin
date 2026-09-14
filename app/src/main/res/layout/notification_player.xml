@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FF333333"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_status_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_stat_play"
+            android:contentDescription="状态" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="等待其他应用播放…"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/iv_play"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_stat_play"
+            android:background="#00000000"
+            android:contentDescription="播放/暂停" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/iv_vol_down"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_stat_vol_down"
+            android:background="#00000000"
+            android:contentDescription="音量减小" />
+
+        <TextView
+            android:id="@+id/tv_volume"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="50%"
+            android:textColor="#FFFFFFFF"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/iv_vol_up"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_stat_vol_up"
+            android:background="#00000000"
+            android:contentDescription="音量增大" />
+    </LinearLayout>
+</LinearLayout>

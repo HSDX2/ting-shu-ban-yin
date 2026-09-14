@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+**/build/
+
+# IDE
+.idea/
+*.iml
+.kotlin/
+
+# Local config（本机路径，不入库）
+local.properties
+
+# Keystores / signing
+*.jks
+*.keystore
+
+# Build artifacts
+*.apk
+*.aab
+
+# OS
+.DS_Store
+Thumbs.db
