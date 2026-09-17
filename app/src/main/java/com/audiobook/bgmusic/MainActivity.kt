@@ -55,7 +55,6 @@ class MainActivity : AppCompatActivity() {
         applyWindowInsets()
 
         ServiceState.syncEnabled.value = Prefs.syncEnabled
-        ServiceState.volume.value = Prefs.volume
         ServiceState.whitelist.value = Prefs.whitelist.toList()
         ServiceState.folderName.value =
             Prefs.folderUri?.let { MusicLibrary.folderDisplayName(this, Uri.parse(it)) } ?: ""
@@ -70,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.swSync.isChecked = Prefs.syncEnabled
         binding.swAutostart.isChecked = Prefs.autoStart
-        binding.sbVolume.progress = (Prefs.volume * 100).toInt()
+        binding.sbVolume.progress = (ServiceState.volume.value * 100).toInt()
         binding.etWhitelist.setText(Prefs.whitelist.joinToString(", "))
 
         binding.btnPickFolder.setOnClickListener { pickFolder.launch(null) }

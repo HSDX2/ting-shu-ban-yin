@@ -66,7 +66,6 @@ class MusicSyncService : Service() {
         Notifications.createChannel(this)
 
         ServiceState.syncEnabled.value = Prefs.syncEnabled
-        ServiceState.volume.value = Prefs.volume
         ServiceState.userPaused.value = false
         ServiceState.whitelist.value = Prefs.whitelist.toList()
         ServiceState.serviceRunning.value = true

@@ -12,6 +12,8 @@ class BgmApp : Application() {
     override fun onCreate() {
         super.onCreate()
         installCrashHandler()
+        Prefs.init(this)
+        ServiceState.volume.value = Prefs.volume
     }
 
     private fun installCrashHandler() {
